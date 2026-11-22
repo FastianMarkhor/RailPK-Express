@@ -1,0 +1,184 @@
+.class-cards-label {
+  font-size: 0.875rem; font-weight: 600; color: var(--slate);
+  margin-bottom: 10px;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Wrapper holds both card + tooltip (position:relative anchor) */
+.class-card {
+  position: relative;
+}
+
+.class-card-inner {
+  width: 100%;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 10px 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.class-card-inner:hover:not(:disabled) {
+  border-color: var(--green);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.class-card.active .class-card-inner {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+.class-card.full .class-card-inner {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--slate-light);
+}
+
+.cc-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.cc-icon { font-size: 1.3rem; }
+.cc-abbr-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: var(--slate);
+  color: var(--white);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+.class-card.active .cc-abbr-badge { background: var(--green-dark); }
+
+.cc-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--slate);
+  line-height: 1.2;
+}
+.cc-fare {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.cc-avail {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.cc-avail.low  { color: var(--gold); font-weight: 700; }
+.cc-avail.none { color: var(--red);  font-weight: 700; }
+
+.cc-selected-tick {
+  position: absolute;
+  top: 6px; right: 6px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Info button */
+.info-btn {
+  position: absolute;
+  top: 5px; left: 5px;
+  z-index: 2;
+  background: var(--slate-light);
+  border: 1px solid var(--border);
+  color: var(--slate-mid);
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.info-btn:hover { background: var(--slate); color: var(--white); }
+
+/* Tooltip */
+.class-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  background: var(--slate);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 14px;
+  width: 220px;
+  box-shadow: var(--shadow-lg);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.class-tooltip strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+.class-tooltip p {
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+}
+.class-tooltip ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+.class-tooltip ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,0.75);
+}
+.class-tooltip ul li svg { color: var(--gold); flex-shrink: 0; }
+.tooltip-layout {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 6px;
+  margin-top: 4px;
+}
+.tooltip-close {
+  position: absolute;
+  top: 6px; right: 6px;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  border-radius: 50%;
+  width: 18px; height: 18px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+
+.class-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .class-grid { grid-template-columns: repeat(2, 1fr); }
+  .class-tooltip { width: 180px; }
+}
+@media (max-width: 400px) {
+  .class-grid { grid-template-columns: 1fr 1fr; }
+}

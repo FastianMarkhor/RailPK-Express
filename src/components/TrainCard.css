@@ -1,0 +1,54 @@
+.train-card { padding: 20px 24px; transition: box-shadow 0.18s, transform 0.18s; }
+.train-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+
+.train-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; gap: 12px; }
+.train-number { margin-bottom: 6px; }
+.train-name { font-size: 1.1rem; font-weight: 700; color: var(--slate); margin: 4px 0; }
+.train-days { font-size: 0.78rem; color: var(--text-muted); }
+.train-fare { text-align: right; flex-shrink: 0; }
+.fare-from { display: block; font-size: 0.75rem; color: var(--text-muted); }
+.fare-amount { display: block; font-family: var(--font-display); font-size: 1.3rem; color: var(--green); font-weight: 800; }
+.fare-class { display: block; font-size: 0.75rem; color: var(--text-muted); }
+
+.train-card-route {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--slate-light); border-radius: 8px; padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.route-point { display: flex; flex-direction: column; align-items: flex-start; min-width: 70px; }
+.route-point.right { align-items: flex-end; }
+.route-time { font-family: var(--font-display); font-size: 1.15rem; color: var(--slate); font-weight: 800; }
+.route-city { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+.route-line { flex: 1; display: flex; align-items: center; gap: 6px; }
+.route-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+.route-track {
+  flex: 1; height: 2px; background: var(--border);
+  display: flex; align-items: center; justify-content: center;
+  gap: 4px; color: var(--text-muted); font-size: 0.75rem; position: relative;
+}
+
+.train-card-footer { display: flex; gap: 16px; align-items: flex-end; justify-content: space-between; }
+.amenities { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+.amenity-tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.75rem; padding: 3px 8px; border-radius: 6px;
+  background: var(--slate-light); color: var(--slate-mid); font-weight: 500;
+}
+.train-card-actions { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; flex-shrink: 0; }
+.seat-preview { width: 160px; }
+
+@media (max-width: 600px) {
+  .train-card { padding: 14px 16px; }
+  .train-card-header { flex-direction: column; }
+  .train-fare { text-align: left; }
+  .train-card-footer { flex-direction: column; align-items: stretch; }
+  .train-card-actions { align-items: stretch; }
+  .seat-preview { width: 100%; }
+}
+
+.fare-abbr {
+  font-style: normal;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 3px;
+}

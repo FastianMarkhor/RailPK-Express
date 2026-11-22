@@ -1,0 +1,27 @@
+.footer { background: var(--slate); color: rgba(255,255,255,0.75); margin-top: 60px; }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px; padding: 48px 20px 36px;
+}
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-size: 1.1rem; color: var(--white);
+  margin-bottom: 12px;
+}
+.footer-logo svg { color: var(--gold); }
+.footer-logo em { color: var(--gold); font-style: normal; }
+.footer-brand p { font-size: 0.875rem; line-height: 1.6; max-width: 280px; }
+.footer-col h4 { font-family: var(--font-display); color: var(--white); margin-bottom: 14px; font-size: 0.95rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li {
+  font-size: 0.875rem; display: flex; align-items: center; gap: 7px;
+}
+.footer-col ul li a { transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 20px; text-align: center; font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+}

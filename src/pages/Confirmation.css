@@ -1,0 +1,44 @@
+.confirm-page { padding: 40px 20px 80px; max-width: 680px; margin: 0 auto; }
+.confirm-card { padding: 40px; }
+
+.confirm-header { text-align: center; margin-bottom: 36px; }
+.confirm-icon { color: var(--green); margin-bottom: 16px; }
+.confirm-header h1 { font-size: 2rem; margin-bottom: 10px; }
+.confirm-header p { color: var(--text-muted); max-width: 380px; margin: 0 auto 16px; }
+.confirm-ref {
+  display: inline-block; background: var(--green-light);
+  border: 1px solid var(--green); border-radius: 8px;
+  padding: 8px 18px; font-size: 0.9rem; color: var(--green-dark);
+}
+
+.confirm-details { margin-bottom: 28px; }
+.confirm-details h3 { font-size: 1.1rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+
+.confirm-ticket {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; margin-bottom: 14px;
+}
+.ct-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.ct-route { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.ct-point { display: flex; flex-direction: column; }
+.ct-point.right { align-items: flex-end; }
+.ct-time { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; }
+.ct-city { font-size: 0.8rem; color: var(--text-muted); }
+.ct-line { flex: 1; height: 2px; background: var(--green); }
+.ct-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.82rem; color: var(--text-muted); padding-top: 8px; border-top: 1px dashed var(--border); }
+
+.confirm-passenger {
+  background: var(--slate-light); border-radius: var(--radius);
+  padding: 16px; margin: 16px 0;
+}
+.confirm-passenger h4 { font-size: 0.875rem; margin-bottom: 8px; }
+.confirm-passenger p { font-size: 0.875rem; color: var(--text-muted); }
+
+.confirm-total {
+  display: flex; justify-content: space-between;
+  font-weight: 700; font-size: 1.1rem;
+  background: var(--green-light); padding: 14px 18px;
+  border-radius: var(--radius); color: var(--green-dark);
+}
+
+.confirm-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
